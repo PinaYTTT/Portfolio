@@ -7,11 +7,21 @@
     <link rel="shortcut icon" href="img/Logo del canal.jpg" type="image/jpg">
     <!--Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="js/Carga.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid contenedor">
+            <div class="OpenAlert" id="open">
+                <div class="alert alert-success alert-dismissible fade show" style="z-index: 100; position: fixed; left: 42%; margin-top: 4%;" role="alert">
+                <strong>Open social network</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            </div>
             <a class="navbar-brand" href="#">
                 <img src="./img/Logo del canal.jpg" alt="" width="30" height="30" style="object-fit:contain; " class="d-inline-block align-top">
                 PinaYT
@@ -25,17 +35,17 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#projects">My projects</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  Social networks
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><button class="dropdown-item" target="_blank" onClick="Bajar(); window.open('https://twitter.com/PinaYTTT')">Twitter</button></li>
+                  <li><button class="dropdown-item" target="_blank" onClick="Bajar(); window.open('https://www.instagram.com/pinaytt/')">Instagram</button></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><button class="dropdown-item" target="_blank" onClick="Bajar(); window.open('https://github.com/PinaYTTT')">Github</button></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -45,8 +55,89 @@
           </div>
         </div>
       </nav>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-</body>
+
+      <div class="header" id="main">
+        <nav class="header__menu">
+            <header class="header__menu-header">
+            </header>
+        </nav>
+        <div class="header__container">
+            <div class="header__left">
+                <div class="header__icon" id="js" style="transform: translate(0px, -150px); opacity: 0.5;">
+                </div>
+                <div class="header__icon" id="html" style="transform: translate(0px, 80px); opacity: 0.5;">
+                </div>
+                <div class="header__icon" id="css" style="transform: translate(0px, -150px); opacity: 0.5;">
+                </div>
+            </div>
+            <div class="header__center">
+                <div class="header__center-icon">
+
+                </div>
+                <img src="./img/Logo del canal.jpg" class="header__center header__center-icon">
+                <h1 class="header__title">
+                    <span class="typed" style="color:aliceblue;">PinaYT</span><span style="color:aliceblue;" class="typed-cursor typed-cursor--blink"></span>
+                </h1>
+                <h3 class="header__subtitle" style="color:aliceblue;" id="dev">
+                    Programmer
+                </h3>
+            </div>
+            <div class="header__right">
+                <div class="header__icon" id="php" style="transform: translate(0px, -150px); opacity: 0.5;">
+                </div>
+                <div class="header__icon" id="node" style="transform: translate(0px, 80px); opacity: 0.5;">
+                </div>
+                <div class="header__icon" id="py" style="transform: translate(0px, -150px); opacity: 0.5;">
+                </div>
+            </div>
+        </div>
+    </div>
+      
+      <!--Fin de nav-->
+      <div class="tarjeta" style="margin-top: 10%; position: relative; left: 40%;">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">About me</h5>
+          <h6 class="card-subtitle mb-2 text-muted">My portfolio</h6>
+          <p class="card-text">Hello my name is PinaYT, I have 12 years old and I live in Argentina. I program in java and C#, I also like to program web pages</p>
+        </div>
+      </div>
+    </div>
+    <div class="Conocimiento">
+    <h1 style="margin-top:5%; position: relative; left:2%;">Languages in which I program:</h1>
+    <img src="./img/Java-icon.png" style="position:relative; left:27%;" width="8%">
+    <img src="./img/C-icon.png" style="position:relative; left:30%;" width="8%">
+    <img src="./img/Css logo.png" style="position:relative; left:33%;" width="8%">
+    <img src="./img/HTML-logo.png" style="position:relative; left:36%;" width="8%">
+    <img src="./img/Js-logo.png" style="position:relative; left:39%;" width="8%">
+    <img src="./img/Nodejs-logo.webp" style="position:relative; left:42%;" width="8%">
+  </div>
+  <div class="projects" id="projects">
+    <h2 class="projects__title">
+        Projects and Repositories
+    </h2>
+
+    <table class="projects__table">
+        <tbody><tr>
+            <th>Date</th>
+            <th>Repository</th>
+        </tr>
+    </tbody></table>
+    <p class="projects__description">
+      Only one Repository is visible since my other Repositories are private
+    </p>
+    <p class="projects__description">
+        Contact me for email: pinacomandos@gmail.com
+    </p>
+</div>
+  <footer class="footer" style="background-color: #AEA2B4; padding: 2%;">
+    <div class="container">
+      <span class="text-muted">All rights reserved. PinaYT © 2021</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      <script src="js/index.js"></script>
+      <script src="js/Repositorios.js"></script>
+    </body>
 </html>
+
