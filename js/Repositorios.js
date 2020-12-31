@@ -11,6 +11,7 @@ window.addEventListener('load',()=>{
                      const title = document.createElement('td');
                      const a = document.createElement('a');
                      a.setAttribute('href',data[index].html_url);
+                     a.setAttribute('target',"_blank");
                      a.append(data[index].name);
 
                      title.append(a);
