@@ -2,7 +2,7 @@
   font-family: 'Lato', sans-serif;
 }
 body{
-    background: url(./img/fondo.jpg);
+    background: url(../img/fondo.jpg);
     background-repeat : repeat;
     background-position : center;
     background-attachment : fixed;
